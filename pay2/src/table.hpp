@@ -1,0 +1,6 @@
+class table {
+public:
+
+private:
+
+};

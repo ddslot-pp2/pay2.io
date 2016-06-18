@@ -1,0 +1,147 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'ws' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'ws', null ]
+6 verbose cache add name=undefined spec="ws" args=["ws",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'ws',
+7 verbose parsed url   path: 'ws',
+7 verbose parsed url   href: 'ws' }
+8 silly lockFile 1457b75d-ws ws
+9 verbose lock ws /home/pp/.npm/1457b75d-ws.lock
+10 silly lockFile 1457b75d-ws ws
+11 silly lockFile 1457b75d-ws ws
+12 verbose addNamed [ 'ws', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile e88fe629-ws ws@
+15 verbose lock ws@ /home/pp/.npm/e88fe629-ws.lock
+16 silly addNameRange { name: 'ws', range: '*', hasData: false }
+17 verbose request where is /ws
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 10be2e8e79f524da
+20 verbose url raw /ws
+21 verbose url resolving [ 'https://registry.npmjs.org/', './ws' ]
+22 verbose url resolved https://registry.npmjs.org/ws
+23 verbose request where is https://registry.npmjs.org/ws
+24 info trying registry request attempt 1 at 20:46:27
+25 verbose etag "YDV0Q78T571UGTDGHNO3O1DY"
+26 http GET https://registry.npmjs.org/ws
+27 http 200 https://registry.npmjs.org/ws
+28 silly registry.get cb [ 200,
+28 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     etag: '"KP6UPY64YVFD2QC21LN909QF"',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     'content-length': '74689',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Sun, 23 Aug 2015 11:46:28 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '27',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-nrt6121-NRT',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1440330388.522490,VS0,VE1',
+28 silly registry.get     vary: 'Accept' } ]
+29 silly addNameRange number 2 { name: 'ws', range: '*', hasData: true }
+30 silly addNameRange versions [ 'ws',
+30 silly addNameRange   [ '0.2.6',
+30 silly addNameRange     '0.2.8',
+30 silly addNameRange     '0.2.9',
+30 silly addNameRange     '0.3.0',
+30 silly addNameRange     '0.3.1',
+30 silly addNameRange     '0.3.2',
+30 silly addNameRange     '0.3.3',
+30 silly addNameRange     '0.3.4',
+30 silly addNameRange     '0.3.4-2',
+30 silly addNameRange     '0.3.5',
+30 silly addNameRange     '0.3.5-2',
+30 silly addNameRange     '0.3.5-3',
+30 silly addNameRange     '0.3.5-4',
+30 silly addNameRange     '0.3.6',
+30 silly addNameRange     '0.3.7',
+30 silly addNameRange     '0.3.8',
+30 silly addNameRange     '0.3.9',
+30 silly addNameRange     '0.4.0',
+30 silly addNameRange     '0.4.1',
+30 silly addNameRange     '0.4.2',
+30 silly addNameRange     '0.4.3',
+30 silly addNameRange     '0.4.5',
+30 silly addNameRange     '0.4.6',
+30 silly addNameRange     '0.4.7',
+30 silly addNameRange     '0.4.8',
+30 silly addNameRange     '0.4.9',
+30 silly addNameRange     '0.4.10',
+30 silly addNameRange     '0.4.11',
+30 silly addNameRange     '0.4.12',
+30 silly addNameRange     '0.4.13',
+30 silly addNameRange     '0.4.14',
+30 silly addNameRange     '0.4.15',
+30 silly addNameRange     '0.4.16',
+30 silly addNameRange     '0.4.17',
+30 silly addNameRange     '0.4.18',
+30 silly addNameRange     '0.4.19',
+30 silly addNameRange     '0.4.20',
+30 silly addNameRange     '0.4.21',
+30 silly addNameRange     '0.4.22',
+30 silly addNameRange     '0.4.23',
+30 silly addNameRange     '0.4.24',
+30 silly addNameRange     '0.4.25',
+30 silly addNameRange     '0.4.27',
+30 silly addNameRange     '0.4.28',
+30 silly addNameRange     '0.4.29',
+30 silly addNameRange     '0.4.30',
+30 silly addNameRange     '0.4.31',
+30 silly addNameRange     '0.4.32',
+30 silly addNameRange     '0.5.0',
+30 silly addNameRange     '0.6.0',
+30 silly addNameRange     '0.6.1',
+30 silly addNameRange     '0.6.2',
+30 silly addNameRange     '0.6.3',
+30 silly addNameRange     '0.6.4',
+30 silly addNameRange     '0.6.5',
+30 silly addNameRange     '0.7.0',
+30 silly addNameRange     '0.7.1',
+30 silly addNameRange     '0.7.2',
+30 silly addNameRange     '0.8.0' ] ]
+31 verbose addNamed [ 'ws', '0.8.0' ]
+32 verbose addNamed [ '0.8.0', '0.8.0' ]
+33 silly lockFile 018ed259-ws-0-8-0 ws@0.8.0
+34 verbose lock ws@0.8.0 /home/pp/.npm/018ed259-ws-0-8-0.lock
+35 silly lockFile cd545d25-gistry-npmjs-org-ws-ws-0-8-0-tgz https://registry.npmjs.org/ws/-/ws-0.8.0.tgz
+36 verbose lock https://registry.npmjs.org/ws/-/ws-0.8.0.tgz /home/pp/.npm/cd545d25-gistry-npmjs-org-ws-ws-0-8-0-tgz.lock
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/ws/-/ws-0.8.0.tgz',
+37 verbose addRemoteTarball   'ac60ebad312121d01e16cc3383d7ec67ad0f0f1f' ]
+38 info retry fetch attempt 1 at 20:46:29
+39 verbose fetch to= /tmp/npm-3071-j6mrzU0E/registry.npmjs.org/ws/-/ws-0.8.0.tgz
+40 http GET https://registry.npmjs.org/ws/-/ws-0.8.0.tgz
+41 http 200 https://registry.npmjs.org/ws/-/ws-0.8.0.tgz
+42 silly lockFile cd545d25-gistry-npmjs-org-ws-ws-0-8-0-tgz https://registry.npmjs.org/ws/-/ws-0.8.0.tgz
+43 silly lockFile cd545d25-gistry-npmjs-org-ws-ws-0-8-0-tgz https://registry.npmjs.org/ws/-/ws-0.8.0.tgz
+44 silly lockFile 018ed259-ws-0-8-0 ws@0.8.0
+45 silly lockFile 018ed259-ws-0-8-0 ws@0.8.0
+46 silly lockFile e88fe629-ws ws@
+47 silly lockFile e88fe629-ws ws@
+48 error Error: EACCES, mkdir '/home/pp/.npm/ws/0.8.0'
+48 error  { [Error: EACCES, mkdir '/home/pp/.npm/ws/0.8.0'] errno: 3, code: 'EACCES', path: '/home/pp/.npm/ws/0.8.0' }
+49 error Please try running this command again as root/Administrator.
+50 error System Linux 3.13.0-53-generic
+51 error command "/usr/bin/node" "/usr/bin/npm" "install" "ws"
+52 error cwd /home/pp/workspace/pp2-ws/node-client
+53 error node -v v0.10.37
+54 error npm -v 1.4.28
+55 error path /home/pp/.npm/ws/0.8.0
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/home/pp/.npm/ws/0.8.0'
+59 verbose exit [ 3, true ]
