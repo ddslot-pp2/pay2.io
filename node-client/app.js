@@ -8,6 +8,7 @@ ws.on('open', function() {
   
   //console.log(jp);
   ws.send(json_packet);
+
 });
 
 ws.on('message', function(message) {

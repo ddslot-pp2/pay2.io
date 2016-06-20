@@ -134,13 +134,18 @@ public:
     //If num_threads>1, start m_io_service.run() in (num_threads-1) threads for thread-pooling
     threads.clear();
     for(size_t c=1;c<num_threads;c++) {
-      threads.emplace_back([this](){
+      threads.emplace_back([this]() {
+
 	  asio_io_service.run();
 	});
     }
 
+    std::cout << "main thread run before" << std::endl;
+
     //Main thread
     asio_io_service.run();
+
+    std::cout << "main thread run after" << std::endl;
 
     //Wait for the rest of the threads, if any, to finish as well
     for(auto& t: threads) {

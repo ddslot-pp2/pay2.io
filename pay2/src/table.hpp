@@ -1,6 +1,0 @@
-class table {
-public:
-
-private:
-
-};

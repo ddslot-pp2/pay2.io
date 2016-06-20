@@ -1,4 +1,4 @@
-//#include "log4cxx_md.hpp"
+ //#include "log4cxx_md.hpp"
 //#include "cd_handler_md.hpp"
 //#include "cd_user_md.hpp"
 //#include "db_md.hpp"
@@ -6,12 +6,8 @@
 #include <time.h>
 #include "module_md.hpp"
 #include "user_md.hpp"
-#include "cards.hpp"
 
 int main() {
-
-  cards c;
-  c.shuffle();
 
   using namespace std;
   using namespace json11;
@@ -26,14 +22,19 @@ int main() {
 
       //std::cout << connection->cd_user_ptr->name << std::endl;
 
-      auto message_str = message->string();
-      std::cout << "[packet]: " << message_str << std::endl;
+      auto msg = message->string();
+      std::cout << "[packet]: " << msg << std::endl;
       string err;
-      auto packet = Json::parse(message_str, err);
+      auto packet = Json::parse(std::move(msg), err);
 
       if (!err.empty()) {
 	std::cout<< "[error] fail to parse json " << err.c_str() << std::endl;
       } else {
+
+
+	std::thread::id this_id = std::this_thread::get_id();
+
+	std::cout << "thread id:" << this_id << std::endl;
 	//std::string h = packet["type"].string_value();
 
 	/*
@@ -53,7 +54,7 @@ int main() {
 
   echo.onopen = [&](std::shared_ptr<WsServer::Connection> connection) {
     std::cout << "Server: Opened connection " << (size_t)connection.get() << std::endl;
-    auto user_ptr = make_shared<user>(server);
+    auto user_ptr = std::make_shared<user>(server);
     user_ptr->connection_ = connection;
     connection->user_ptr = user_ptr;
   };
