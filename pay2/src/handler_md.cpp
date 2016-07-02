@@ -1,0 +1,69 @@
+#include <utility>
+#include <iostream>
+#include "handler_md.hpp"
+#include "handler/login_out_req.hpp"
+
+handler_md::handler_md() {
+
+}
+
+handler_md::~handler_md() {
+ 
+}
+
+void handler_md::add_handler(handler_callback callback) {
+  handler_container_.push_back(callback);
+}
+
+void handler_md::init() {
+  std::cout << "cd_handler_md init called" << std::endl;
+ 
+  add_handler(login_out::login_req);
+  /*
+  // user req
+  r &= add_payload("login_req", login_req);
+  r &= add_payload("create_guest_account_req", create_guest_account_req);
+  r &= add_payload("update_alive_noti", update_alive_noti);
+
+  r &= add_payload("update_game_info_noti", update_game_info_noti);
+  r &= add_payload("get_ranking_req", get_ranking_req);
+  r &= add_payload("check_version_req", check_version_req);
+
+  // lobby_req
+  r &= add_payload("join_lobby_req", join_lobby_req);
+  r &= add_payload("leave_lobby_req", leave_lobby_req);
+  r &= add_payload("send_chat_noti", send_chat_noti);
+
+  r &= add_payload("room_list_req", room_list_req);
+  r &= add_payload("chat_list_req", chat_list_req);
+
+  // play_req
+  r &= add_payload("create_room_req", create_room_req);
+  r &= add_payload("quick_join_req", quick_join_req);
+  r &= add_payload("join_room_req", join_room_req);
+  r &= add_payload("leave_room_req", leave_room_req);
+  r &= add_payload("start_game_req", start_game_req);
+  r &= add_payload("ready_game_noti", ready_game_noti);
+
+  r &= add_payload("ready_stage_noti", ready_stage_noti);
+  r &= add_payload("check_point_req", check_point_req);
+
+  r &= add_payload("master_info_req", master_info_req);
+  r &= add_payload("opponent_info_req", opponent_info_req);
+  r &= add_payload("kick_opponent_noti", kick_opponent_noti);
+  r &= add_payload("check_ready_opponent_req", check_ready_opponent_req);
+
+  // single_req
+  r &= add_payload("single_img_info_req", single_img_info_req);
+  r &= add_payload("max_stage_req", max_stage_req);
+  */
+
+ 
+}
+
+
+bool handler_md::is_proper_payload(int packet_id) {
+  if(packet_id < 0 || packet_id > static_cast<int>(handler_container_.size())) return false;
+
+  return true;
+}

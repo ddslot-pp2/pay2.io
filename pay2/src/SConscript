@@ -7,10 +7,10 @@ env.Append(CXXFLAGS=['-std=c++14', '-Wall', '-g'])
 env.Append(CPPPATH=['/usr/local/include'])
 
 
-env.Append(LIBS=['pthread', 'boost_system', 'boost_regex', 'boost_thread', 'boost_filesystem', 'boost_program_options', 'boost_coroutine', 'boost_context', 'apr-1', 'aprutil-1', 'log4cxx'])
+env.Append(LIBS=['pthread', 'boost_system', 'boost_regex', 'boost_thread', 'boost_filesystem', 'boost_program_options', 'boost_coroutine', 'boost_context', 'apr-1', 'aprutil-1', 'log4cxx', 'tbb', 'tbbmalloc', 'tbbmalloc_proxy'])
 
 
 env.Append(LIBPATH=['/usr/local/lib'])
 
 
-env.Program('xx', ['main.cpp', 'utils/json11.cpp', 'user_md.cpp', 'user.cpp'])
+env.Program('xx', ['main.cpp', 'utils/json11.cpp', 'handler_md.cpp', 'worker_thread_md.cpp', 'user_md.cpp', 'user.cpp', 'thread_local_task.cpp', 'handler/login_out_req.cpp'])

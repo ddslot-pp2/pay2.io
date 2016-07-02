@@ -24,8 +24,8 @@ public:
     return obj;
   }
 
-  bool init();
-  bool add_payload(std::string, std::function<bool(user_ptr, Json)>);
+  void add_handler(std::string, std::function<bool(user_ptr, Json payload)>);
+  void init();
 };
 
 #endif
